@@ -1,0 +1,11 @@
+cbs	出版社
+jg	价格
+mc	名称
+sj	书籍
+zz	作者
+gb	国别
+mz	名字
+nl	年龄
+sl	数量
+lx	类型
+zz_sj	作者_书籍
