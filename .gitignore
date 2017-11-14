@@ -1,13 +1,28 @@
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/ntellij,java,maven,eclipse
 
 ### Java ###
 *.class
+=======
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+>>>>>>> 1f00b786414b0dfdf89e877dbb1e55d53fca9a7a
 
 # Package Files #
 *.jar
 *.war
 *.ear
+<<<<<<< HEAD
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -109,3 +124,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+=======
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> 1f00b786414b0dfdf89e877dbb1e55d53fca9a7a
