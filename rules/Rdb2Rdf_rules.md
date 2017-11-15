@@ -30,6 +30,7 @@
 	 + meta:实例  rdf:type  owl:ObjectProperty.
 	 + meta:实例  rdfs:domain  meta:blankNode.
 	 + meta:数量  rdf:type  owl:DatatypeProperty.
+	 + meta:pic  rdf:type  owl:DatatypeProperty
 
 
 ## RDB2RDF映射规则 ##
@@ -121,6 +122,8 @@
  + (实例层)设置实例的数据类型属性值
 	 + rdb:图书.书籍.1  rdb:图书.书籍.名称  "Java多线程编程核心技术"^^xsd:string
 	 + rdb:图书.书籍.1  rdb:图书.书籍.价格  54^^xsd:integer
+	 + rdb:图书.书籍.1  rdb:图书.书籍.pic   "E:\\图书\\书籍\\1.jpg"^^xsd:string
+	  (这里要注意了,在处理图像属性时不仅要指出该实例图片所在的位置,还要把图片数据写入这个位置)
  + (实例层)设置实例的对象属性关系
 	 + rdb:5e0ad474-c38d-11e7-abc4-cec278b6b50a  rdf:type  meta:blankNode
 	 + rdb:图书.书籍.1  rdb:图书.书籍.出版社  rdb:5e0ad474-c38d-11e7-abc4-cec278b6b50a
