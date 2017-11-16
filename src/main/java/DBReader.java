@@ -11,8 +11,10 @@ import java.util.*;
 public class DBReader {
 
     private Connection conn = null;
+	private String dbName = null;
 
     public DBReader(String dbName){
+	    this.dbName = dbName;
         conn = ConnFactory.getConnection(dbName);
     }
 
@@ -31,7 +33,7 @@ public class DBReader {
         Iterator<String> tbNames = tbs.keySet().iterator();
         while(tbNames.hasNext()){
             builder.append("select table_name,column_name,data_type from information_schema.columns where table_name = ");
-            builder.append("\'" + tbNames.next() + "\'").append(" union ");
+            builder.append("\'" + tbNames.next() + "\' and table_schema = \'" + dbName + "\'").append(" union ");
         }
         builder.delete(builder.length() - 7,builder.length() - 1);    //去掉最后一个 'union'
         PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(builder.toString());
@@ -72,9 +74,9 @@ public class DBReader {
             builder.append("select columns.table_name as table_name,columns.column_name as column_name," +
                     "referenced_table_name,true as isPri from information_schema.columns,information_schema.key_column_usage " +
                     "where columns.column_name = key_column_usage.column_name and referenced_table_name is not null " +
-                    " and columns.table_name = \'" + relTbName + "\'").append(" union ");
+                    " and columns.table_name = \'" + relTbName + "\' and columns.table_schema = \'" + dbName + "\'").append(" union ");
             builder.append("select table_name,column_name,data_type,false from information_schema.columns where " +
-                    " table_name = \'" + relTbName + "\' and column_key != \'pri\' ");
+                    " table_name = \'" + relTbName + "\'and table_schema = \'" + dbName + "\' and column_key != \'pri\' ");
             builder.append(" union ");
         }
         builder.delete(builder.length() - 7,builder.length() - 1);  //删去最后一个 "union"

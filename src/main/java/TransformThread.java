@@ -74,7 +74,7 @@ public class TransformThread implements Runnable{
             reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\pyToZh.txt"));
             pyToZh = new HashMap<>();
             String line = reader.readLine();
-            while(line != null){
+            while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split("\\s+");
                 pyToZh.put(lineArray[0],lineArray[1]);
                 line = reader.readLine();
@@ -102,7 +102,7 @@ public class TransformThread implements Runnable{
             reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\colJudgeDic.txt"));
             colJudgeDic = new HashMap<>();
             String line = reader.readLine();
-            while(line != null){
+            while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split("\\s+");
                 colJudgeDic.put(lineArray[0],lineArray[1].equals("OP") ? PropertyType.OP : PropertyType.GC);
                 line = reader.readLine();
@@ -130,7 +130,7 @@ public class TransformThread implements Runnable{
             reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\relTbToRelMap.txt"));
             relTbToRelMap = new HashMap<>();
             String line = reader.readLine();
-            while(line != null){
+            while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split(":");
                 boolean nTonN = lineArray[1].equals("n-n") ? true : false;
                 if(nTonN){
@@ -164,7 +164,7 @@ public class TransformThread implements Runnable{
             reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\entityTableMap.txt"));
             entityTableMap = new HashMap<>();
             String line = reader.readLine();
-            while(line != null){
+            while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split(":");
                 entityTableMap.put(lineArray[0],lineArray[1]);  //表名为键,主键名为值
                 line = reader.readLine();
@@ -192,7 +192,7 @@ public class TransformThread implements Runnable{
             reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\entityDescMap.txt"));
             entityDescMap = new HashMap<>();
             String line = reader.readLine();
-            while(line != null){
+            while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split(":");
                 entityDescMap.put(lineArray[0],lineArray[1]);  //表名为键,描述列名为值
                 line = reader.readLine();
