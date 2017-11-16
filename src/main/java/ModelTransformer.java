@@ -121,6 +121,11 @@ public class ModelTransformer {
                 triples.add(uri + " rdfs:label \"" + rs.getString(entityDescMap.get(tbName)) + "\" .");  //加入当前实例的可读名称
                 System.out.println(uri + " rdfs:label \"" + rs.getString(entityDescMap.get(tbName)) + "\" .");
                 for(Column col:cols){  //声明实例的属性及值
+
+                    //首先判断这个字段的值是不是NULL,如果是NULL或者空字符串,则当前实例与该字段无任何瓜葛(各种情况都试一下)
+                    if(rs.getString(col.getColName()) == null || rs.getString(col.getColName()).matches("\\s*") || rs.wasNull())
+                        continue;
+
                     if(col.getRdfTp() == PropertyType.DP){  //声明实例的某个数据类型属性的值
                         String tmpStr = uri + " rdb:" + dbName + "." + pyNametoZhName(tbName) + "." + pyNametoZhName(col.getColName()) + " ";
                         switch(col.getDataTp()){  //根据字段值的数据类型做相应操作
@@ -143,11 +148,14 @@ public class ModelTransformer {
                         triples.add("rdb:" + uuid + " meta:实例 rdb:" + dbName + "." + pyNametoZhName(col.getColName()) + "." + rs.getString(col.getColName()) + " .");
                         System.out.println("rdb:" + uuid + " meta:实例 rdb:" + dbName + "." + pyNametoZhName(col.getColName()) + "." + rs.getString(col.getColName()) + " .");
                     }else if(col.getRdfTp() == PropertyType.GC){
-                        extraClasses.add(rs.getString(col.getColName()));   //先把值存起来
-                        triples.add(uri + " rdf:type rdb:" + dbName + "." + rs.getString(col.getColName()) + " .");
-                        System.out.println(uri + " rdf:type rdb:" + dbName + "." + rs.getString(col.getColName()) + " .");
-                    }else{
-
+                        String newClassName = rs.getString(col.getColName());
+                        String[] names = addNotContainedNameAndReturnAllNames(newClassName);
+                        for(String name : names){
+                            triples.add(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
+                            System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
+                        }
+                    }else if(col.getRdfTp() == PropertyType.GP){  //该字段是图片字段
+                        triples.add(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string");
                     }
                 }
             }
@@ -331,5 +339,38 @@ public class ModelTransformer {
                 }
             }
         }
+    }
+
+    /**
+     * 将新的类名加入extraClasses,然后返回全部新类名
+     * @param newClassName
+     * @return
+     */
+    private String[] addNotContainedNameAndReturnAllNames(String newClassName){
+        String[] names = newClassName.split("/");
+        for(String name : names){
+            if(!classIsContained(name))
+                extraClasses.add(name);
+        }
+        return names;
+    }
+
+    /**
+     * 检查数据库中单主键实体表名转换成的那些类名是否已经包含了这个新类名
+     * 无论新类名是以zh还是en的形式出现,都能检查出来
+     * @param name 新类名
+     * @return 包含则返回true,不包含则返回false
+     */
+    private boolean classIsContained(String name){
+        boolean isContained = false;
+        Iterator<String> oriClasses = entityTableMap.keySet().iterator();
+        while(oriClasses.hasNext()){
+            String oriClassName = oriClasses.next();
+            if(oriClassName.equals(name) || pyNametoZhName(oriClassName).equals(name)){
+                isContained = true;
+                break;
+            }
+        }
+        return isContained;
     }
 }
