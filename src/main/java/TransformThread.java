@@ -104,7 +104,14 @@ public class TransformThread implements Runnable{
             String line = reader.readLine();
             while(line != null && !line.equals("")){
                 String[] lineArray = line.trim().split("\\s+");
-                colJudgeDic.put(lineArray[0],lineArray[1].equals("OP") ? PropertyType.OP : PropertyType.GC);
+				PropertyType type = null;
+				switch(lineArray[1]){
+				    case "OP":type = PropertyType.OP;break;
+					case "GC":type = PropertyType.GC;break;
+					case "GP":type = PropertyType.GP;break;
+					default:type = PropertyType.DP;break;
+				}
+                colJudgeDic.put(lineArray[0],type);
                 line = reader.readLine();
             }
         } catch (FileNotFoundException e) {
