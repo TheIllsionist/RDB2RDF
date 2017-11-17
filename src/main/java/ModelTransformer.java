@@ -155,8 +155,8 @@ public class ModelTransformer {
                             System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
                         }
                     }else if(col.getRdfTp() == PropertyType.GP){  //该字段是图片字段
-                        triples.add(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string .");
-						System.out.println(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string .");
+                        triples.add(uri + " meta:pic \"" + uri.split("\\:")[1].replaceAll("\\.","\\\\\\\\") + ".jpg\"^^xsd:string .");
+						System.out.println(uri + " meta:pic \"" + uri.split("\\:")[1].replaceAll("\\.","\\\\\\\\") + ".jpg\"^^xsd:string .");
                     }
                 }
             }
