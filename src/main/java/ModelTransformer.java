@@ -119,7 +119,7 @@ public class ModelTransformer {
                 triples.add(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(tbName) + " .");  //定义当前行为一个实例
                 System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(tbName) + " .");
 				//如果该单主键实体表没有描述列,或者对于当前实例来说,描述列的值为空或者空串,则不加当前实例的label(没办法加)
-				if(entityDescMap.get(tbName) != null && rs.getString(entityDescMap.get(tbName)) != null && !rs.getString(entityDescMap.get(tbName)).match("\\s*")){
+				if(entityDescMap.get(tbName) != null && rs.getString(entityDescMap.get(tbName)) != null && !rs.getString(entityDescMap.get(tbName)).matches("\\s*")){
                     triples.add(uri + " rdfs:label \"" + rs.getString(entityDescMap.get(tbName)) + "\" .");
 					System.out.println(uri + "rdfs:label \"" + rs.getString(entityDescMap.get(tbName)) + "\" .");
 				}
@@ -156,8 +156,8 @@ public class ModelTransformer {
                     }else if(col.getRdfTp() == PropertyType.GC){
                         String newClassName = rs.getString(col.getColName());
 						addNotContainedName(newClassName);
-                        triples.add(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
-                        System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
+                        triples.add(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(newClassName) + " .");
+                        System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(newClassName) + " .");
                     }else if(col.getRdfTp() == PropertyType.GP){  //该字段是图片字段
                         triples.add(uri + " meta:pic \"" + uri.split("\\:")[1].replaceAll("\\.","\\\\\\\\") + ".jpg\"^^xsd:string .");
 						System.out.println(uri + " meta:pic \"" + uri.split("\\:")[1].replaceAll("\\.","\\\\\\\\") + ".jpg\"^^xsd:string .");
