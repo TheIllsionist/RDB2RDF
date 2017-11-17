@@ -94,8 +94,8 @@ public class ModelTransformer {
                     extraOpAndValues.put(col.getColName(),new HashSet<>());  //作为对象属性的字段还有其他需要处理的地方
                 }else if(proType == PropertyType.GC){  //该字段描述了类型信息
 
-                }else{             //该字段表示其值需要被转换为图片
-
+                }else if(proType == PropertyType.GP){ //该字段表示其值需要被转换为图片
+					//图片属性暂时统一使用 meta:pic
                 }
             }
         }
@@ -155,7 +155,8 @@ public class ModelTransformer {
                             System.out.println(uri + " rdf:type rdb:" + dbName + "." + pyNametoZhName(name) + " .");
                         }
                     }else if(col.getRdfTp() == PropertyType.GP){  //该字段是图片字段
-                        triples.add(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string");
+                        triples.add(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string .");
+						System.out.println(uri + " meta:pic \"" + uri.split(":")[1].replaceAll("\\.","\\") + ".jpg\"^^xsd:string .");
                     }
                 }
             }
