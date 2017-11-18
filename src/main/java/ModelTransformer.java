@@ -91,7 +91,7 @@ public class ModelTransformer {
                     System.out.println("rdb:" + dbName + "." + pyNametoZhName(tbName) + "." + pyNametoZhName(col.getColName()) + " rdfs:label \"" + pyNametoZhName(col.getColName()) + "\" .");
                     triples.add("rdb:" + dbName + "." + pyNametoZhName(tbName) + "." + pyNametoZhName(col.getColName()) + " rdfs:range meta:blankNode .");
                     System.out.println("rdb:" + dbName + "." + pyNametoZhName(tbName) + "." + pyNametoZhName(col.getColName()) + " rdfs:range meta:blankNode .");
-                    extraOpAndValues.put(col.getColName(),new HashSet<>());  //作为对象属性的字段还有其他需要处理的地方
+                    extraOpAndValues.put(col.getColName(),new HashSet<String>());  //作为对象属性的字段还有其他需要处理的地方
                 }else if(proType == PropertyType.GC){  //该字段描述了类型信息
 
                 }else if(proType == PropertyType.GP){ //该字段表示其值需要被转换为图片

@@ -71,7 +71,7 @@ public class TransformThread implements Runnable{
         BufferedReader reader = null;
         HashMap<String,String> pyToZh = null;
         try {
-            reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\pyToZh.txt"));
+            reader = new BufferedReader(new FileReader("./src/main/resources/" + dbName + "/pyToZh.txt"));
             pyToZh = new HashMap<>();
             String line = reader.readLine();
             while(line != null && !line.equals("")){
@@ -99,7 +99,7 @@ public class TransformThread implements Runnable{
         BufferedReader reader = null;
         HashMap<String,PropertyType> colJudgeDic = null;
         try{
-            reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\colJudgeDic.txt"));
+            reader = new BufferedReader(new FileReader("./src/main/resources/" + dbName + "/colJudgeDic.txt"));
             colJudgeDic = new HashMap<>();
             String line = reader.readLine();
             while(line != null && !line.equals("")){
@@ -134,7 +134,7 @@ public class TransformThread implements Runnable{
         BufferedReader reader = null;
         HashMap<String,Relation> relTbToRelMap = null;
         try{
-            reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\relTbToRelMap.txt"));
+            reader = new BufferedReader(new FileReader("./src/main/resources/" + dbName + "/relTbToRelMap.txt"));
             relTbToRelMap = new HashMap<>();
             String line = reader.readLine();
             while(line != null && !line.equals("")){
@@ -168,7 +168,7 @@ public class TransformThread implements Runnable{
         BufferedReader reader = null;
         HashMap<String,String> entityTableMap = null;
         try {
-            reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\entityTableMap.txt"));
+            reader = new BufferedReader(new FileReader("./src/main/resources/" + dbName + "/entityTableMap.txt"));
             entityTableMap = new HashMap<>();
             String line = reader.readLine();
             while(line != null && !line.equals("")){
@@ -196,7 +196,7 @@ public class TransformThread implements Runnable{
         BufferedReader reader = null;
         HashMap<String,String> entityDescMap = null;
         try {
-            reader = new BufferedReader(new FileReader(".\\src\\main\\resources\\" + dbName + "\\entityDescMap.txt"));
+            reader = new BufferedReader(new FileReader("./src/main/resources/" + dbName + "/entityDescMap.txt"));
             entityDescMap = new HashMap<>();
             String line = reader.readLine();
             while(line != null && !line.equals("")){

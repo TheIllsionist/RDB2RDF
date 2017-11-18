@@ -11,7 +11,7 @@ public class MysqlConnection {
 
     private static Properties prop = null;   //数据库连接参数
 
-    private static final String configFileName = ".\\src\\main\\resources\\db.properties";  //数据库配置文件全名
+    private static final String configFileName = "./src/main/resources/db.properties";  //数据库配置文件全名
 
     /**
      * 获取数据库连接
