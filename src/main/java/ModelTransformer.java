@@ -38,12 +38,12 @@ public class ModelTransformer {
     private Property instanceIs = null;
     private Property pic = null;
 
+    //临时存储
     /**
      * 在进行单主键实体表的处理时存储所有单主键实体表的表名和它们拥有的字段名和字段的数据类型
      * 在进行多对多关联表的处理时存储所有多对多关联表的表名和它们拥有的非主键字段以及数据类型
      */
     private HashMap<String,List<Column>> tbColsWithTypes = null;
-    //作为中间存储
     private HashMap<String,HashMap<String,String>> keyToRefTbMap = null;  //多对多关联表主键与该主键所引用的表名的对应关系
 
     /**

@@ -37,26 +37,52 @@ public class TransformThread implements Runnable{
         subReadThread.start();
         try {
             subReadThread.join();
+            System.out.println("数据库" + dbName + "的转换配置信息读取成功!");
         } catch (InterruptedException e) {
             System.out.println("执行读取数据库" + dbName + "转换配置信息子线程时出现错误!");
             e.printStackTrace();
+            return;
         }
-        System.out.println("数据库" + dbName + "的转换配置信息读取成功!");
+        System.out.println("现在开始对RDB模型进行转换......");
+        Thread subWriteThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    modelTransformer.transEntitySchema();
+                    modelTransformer.transEntityInstance();
+                    modelTransformer.transRelationSchema();
+                    modelTransformer.transRelationInstance();
+                    Model model = modelTransformer.getModel();
+                    if(model == null || model.size() == 0){
+                        System.out.println("模型转换出现问题,结果Statements为0!");
+                        return;
+                    }else{
+                        System.out.println("转换成功,正在写入文件......");
+                        File file = new File("./src/main/resources/KG/TestDB.owl");
+                        FileOutputStream outputStream = new FileOutputStream(file,true);
+                        RDFDataMgr.write(outputStream,model,Lang.TURTLE);
+                        outputStream.flush();
+                    }
+                }catch (SQLException e){
+                    System.out.println("执行数据库查询出错!");
+                    e.printStackTrace();
+                    return;
+                }catch (FileNotFoundException e){
+                    System.out.println("找不到要写入的文件!");
+                    e.printStackTrace();
+                    return;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return;
+                }
+            }
+        });
+        subWriteThread.start();
         try{
-            modelTransformer.transEntitySchema();
-            modelTransformer.transEntityInstance();
-            modelTransformer.transRelationSchema();
-            modelTransformer.transRelationInstance();
-            Model model = modelTransformer.getModel();
-            File testDB = new File("./src/main/resources/KG/TestDB.owl");
-            FileOutputStream stream = new FileOutputStream(testDB,false);
-            RDFDataMgr.write(stream,model, Lang.TURTLE);
-            stream.flush();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        } catch (IOException e) {
+            subWriteThread.join();
+            System.out.println("RDF写入文件成功!");
+            return;
+        }catch (InterruptedException e){
             e.printStackTrace();
         }
     }
