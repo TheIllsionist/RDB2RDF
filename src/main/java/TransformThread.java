@@ -1,11 +1,6 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by The Illsionist on 2017/11/10.
@@ -44,23 +39,6 @@ public class TransformThread implements Runnable{
             e.printStackTrace();
         }
         System.out.println("数据库" + dbName + "的转换配置信息读取成功!");
-        //进行模型转换
-        try {
-            System.out.println("单主键实体模式层:");
-            System.out.println("----------------------------------------------------------------------------------");
-            modelTransformer.transEntitySchema();
-            System.out.println("单主键实体实例层:");
-            System.out.println("----------------------------------------------------------------------------------");
-            modelTransformer.transEntityInstance();
-            System.out.println("多对多实体模式层");
-            System.out.println("----------------------------------------------------------------------------------");
-            modelTransformer.transRelationSchema();
-            System.out.println("多对多实体实例层:");
-            System.out.println("----------------------------------------------------------------------------------");
-            modelTransformer.transRelationInstance();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     /**
