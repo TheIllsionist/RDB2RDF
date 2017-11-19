@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JenaTest.java" afterPath="$PROJECT_DIR$/src/main/java/JenaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TransformThread.java" afterPath="$PROJECT_DIR$/src/main/java/TransformThread.java" />
     </list>
@@ -27,51 +24,7 @@
     <favorites_list name="RDB2RDF" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TransformThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-              <folding>
-                <element signature="e#567#1000#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-                <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-                <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-                <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-                <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-                <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-                <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-                <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-                <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
-                <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelTransformer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ModelTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="129" column="57" lean-forward="true" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#getUUID#0;class#ModelTransformer#0" expanded="false" />
-                <element signature="docComment;method#DivideRelInfo#0;class#ModelTransformer#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -114,8 +67,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/MysqlConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/JenaTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransformThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
       </list>
     </option>
   </component>
@@ -214,10 +167,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JenaTest">
+  <component name="RunManager" selected="Application.RdbToRdf">
     <configuration name="JenaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="JenaTest" />
@@ -692,8 +645,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.JenaTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.RdbToRdf" />
+        <item index="0" class="java.lang.String" itemvalue="Application.RdbToRdf" />
+        <item index="1" class="java.lang.String" itemvalue="Application.JenaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -731,28 +684,30 @@
       <workItem from="1510922379110" duration="1989000" />
       <workItem from="1510982359081" duration="23919000" />
       <workItem from="1511015532307" duration="13964000" />
+      <workItem from="1511070938794" duration="8148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137165000" />
+    <option name="totallyTimeSpent" value="145313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="141" y="-4" width="1303" height="780" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.484985" sideWeight="0.5111453" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.025525525" sideWeight="0.48885474" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19906688" sideWeight="0.48885474" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14527287" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15458167" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -766,7 +721,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -883,9 +837,9 @@
         <state relative-caret-position="425">
           <caret line="31" column="66" lean-forward="false" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
           <folding>
-            <element signature="e#567#1000#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
@@ -991,9 +945,9 @@
         <state relative-caret-position="136">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="71" />
           <folding>
-            <element signature="e#567#1000#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
@@ -1038,7 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,19 +1105,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.rdf" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.owl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rules/Rdb2Rdf_rules.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1155">
             <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1174,17 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JenaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,15 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RdbToRdf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1208,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="13" column="79" lean-forward="false" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,31 +1167,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/JenaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+        <state relative-caret-position="342">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
-            <element signature="e#567#1000#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.owl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModelTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="129" column="57" lean-forward="true" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
+        <state relative-caret-position="211">
+          <caret line="143" column="70" lean-forward="false" selection-start-line="143" selection-start-column="70" selection-end-line="143" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
@@ -1281,6 +1199,33 @@
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#getUUID#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#DivideRelInfo#0;class#ModelTransformer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RdbToRdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding>
+            <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
           </folding>
         </state>
       </provider>

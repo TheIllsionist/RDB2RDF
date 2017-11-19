@@ -1,3 +1,6 @@
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFDataMgr;
 import java.io.*;
 import java.sql.SQLException;
 import java.util.*;
@@ -39,6 +42,23 @@ public class TransformThread implements Runnable{
             e.printStackTrace();
         }
         System.out.println("数据库" + dbName + "的转换配置信息读取成功!");
+        try{
+            modelTransformer.transEntitySchema();
+            modelTransformer.transEntityInstance();
+            modelTransformer.transRelationSchema();
+            modelTransformer.transRelationInstance();
+            Model model = modelTransformer.getModel();
+            File testDB = new File("./src/main/resources/KG/TestDB.owl");
+            FileOutputStream stream = new FileOutputStream(testDB,false);
+            RDFDataMgr.write(stream,model, Lang.TURTLE);
+            stream.flush();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

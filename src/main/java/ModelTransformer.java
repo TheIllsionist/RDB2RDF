@@ -33,6 +33,7 @@ public class ModelTransformer {
     private String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
     private String owl = "http://www.w3.org/2002/07/owl#";
     private String meta = "http:kse.seu.edu.cn/meta#";
+    private String xsd = "http://www.w3.org/2001/XMLSchema#";
     private Resource blankNode = null;
     private Property instanceIs = null;
     private Property pic = null;
@@ -56,6 +57,9 @@ public class ModelTransformer {
         initModel();
     }
 
+    /**
+     * 根据元本体构建规范对模型进行初始化
+     */
     private void initModel(){
         //创建模型同时定义前缀
         model = ModelFactory.createDefaultModel();
@@ -64,13 +68,13 @@ public class ModelTransformer {
         model.setNsPrefix("rdfs",rdfs);
         model.setNsPrefix("owl",owl);
         model.setNsPrefix("meta",meta);
+        model.setNsPrefix("xsd",xsd);
         blankNode = model.createResource(meta + "blankNode");
         blankNode.addProperty(RDF.type,OWL.Class);
         instanceIs = model.createProperty(meta + "实例");
         instanceIs.addProperty(RDF.type,OWL.ObjectProperty).addProperty(RDFS.domain,blankNode);
         pic = model.createProperty(meta + "pic");
         pic.addProperty(RDF.type,OWL.DatatypeProperty).addProperty(RDFS.label,"图片");
-
     }
 
     public void setPyToZh(HashMap<String, String> pyToZh) {
@@ -88,13 +92,17 @@ public class ModelTransformer {
     public void setEntityDescMap(HashMap<String, String> entityDescMap) {
         this.entityDescMap = entityDescMap;
     }
+
+    public Model getModel(){
+        return this.model;
+    }
+
     /**
      * 单主键实体表模式层的转换
      * @return 结果triple的列表
      * @throws SQLException
      */
     public void transEntitySchema() throws SQLException{
-        LinkedList<String> triples = new LinkedList<>();
         tbColsWithTypes = dbReader.tbColsWithTypes(entityTableMap); //读取每张单主键实体表的所有字段和对应数据类型于内存中
         Iterator<String> tableIterator = tbColsWithTypes.keySet().iterator();
         while(tableIterator.hasNext()){
@@ -147,7 +155,7 @@ public class ModelTransformer {
                     Property predicate = model.getProperty(rdb + dbName + "." + pyNametoZhName(tbName) + "." + pyNametoZhName(col.getColName()));//从Model中查出谓词
                     if(col.getRdfTp() == PropertyType.DP){
                         switch(col.getDataTp()){
-                            case STR:sbj.addLiteral(predicate,model.createTypedLiteral(rs.getString(col.getColName()), XSDDatatype.XSDstring));break;
+                            case STR:sbj.addLiteral(predicate,model.createTypedLiteral(rs.getString(col.getColName()),XSDDatatype.XSDstring));break;
                             case INT:sbj.addLiteral(predicate,model.createTypedLiteral(rs.getInt(col.getColName()),XSDDatatype.XSDinteger));break;
                             case DBL:sbj.addLiteral(predicate,model.createTypedLiteral(rs.getDouble(col.getColName()),XSDDatatype.XSDdouble));break;
                             case DT:sbj.addLiteral(predicate,model.createTypedLiteral(rs.getDate(col.getColName()),XSDDatatype.XSDdate));break;
@@ -260,13 +268,13 @@ public class ModelTransformer {
     private Resource dataTypeToXSD(DataType dt){
         switch (dt){
             case INT:return XSD.integer;
-            case STR:return XSD.normalizedString;
+            case STR:return XSD.xstring;
             case DBL:return XSD.decimal;
             case DT:return XSD.date;
             case TM:return XSD.time;
             case DTTM:return XSD.dateTime;
         }
-        return XSD.normalizedString;  //默认是字符串
+        return XSD.xstring;  //默认是字符串
     }
 
     /**
