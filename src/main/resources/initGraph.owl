@@ -1,0 +1,14 @@
+@prefix rdb:   <http://kse.seu.edu.cn/rdb#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix meta:  <http://kse.seu.edu.cn/meta#> .
+@prefix wgbq:  <http://kse.seu.edu.cn/wgbq#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+meta:blankNode  a  owl:Class .
+
+meta:pic  a         owl:DatatypeProperty ;
+        rdfs:label  "图片" .
+
+meta:实例  a           owl:ObjectProperty ;
+        rdfs:domain  meta:blankNode .

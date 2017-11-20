@@ -3,7 +3,7 @@ import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
-
+import org.apache.jena.vocabulary.RDFS;
 import java.io.*;
 
 /**
@@ -17,22 +17,24 @@ public class JenaTest {
         String rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
         String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
         String owl = "http://www.w3.org/2002/07/owl#";
+        String xsd = "http://www.w3.org/2001/XMLSchema#";
+        String meta = "http://kse.seu.edu.cn/meta#";
+        String wgbq = "http://kse.seu.edu.cn/wgbq#";
         model.setNsPrefix("rdb",rdb);
         model.setNsPrefix("rdf",rdf);
         model.setNsPrefix("rdfs",rdfs);
         model.setNsPrefix("owl",owl);
-        model.createResource(rdb + "图书.书籍.名称").addProperty(RDF.type,OWL.DatatypeProperty);
-        Resource bookClass = model.createResource(rdb + "图书.书籍");
-        bookClass.addProperty(RDF.type, OWL.Class);
-        Resource book = model.createResource(rdb + "图书.书籍.1");
-        Resource book2 = model.createResource(rdb + "图书.书籍.1");  //Jena不会重复创建Resource
-        book.addProperty(RDF.type,bookClass);
+        model.setNsPrefix("meta",meta);
+        model.setNsPrefix("wgbq",wgbq);
+        Resource blankNode = model.createResource(meta + "blankNode").addProperty(RDF.type,OWL.Class);
+        model.createProperty(meta + "实例").addProperty(RDF.type,OWL.ObjectProperty).addProperty(RDFS.domain,blankNode);
+        Property pic = model.createProperty(meta + "pic");
+        pic.addProperty(RDF.type,OWL.DatatypeProperty).addProperty(RDFS.label,"图片");
         try{
-            //使用Jena将内存中的模型写入文件
-            File testDB = new File("./src/main/resources/KG/TestDB.owl");
-            FileOutputStream stream = new FileOutputStream(testDB,false);
-            RDFDataMgr.write(stream,model,Lang.NTRIPLES);
-            stream.flush();
+            File initGraph = new File("./src/main/resources/initGraph.owl");
+            FileOutputStream outputStream = new FileOutputStream(initGraph,false);
+            RDFDataMgr.write(outputStream,model,Lang.TURTLE); // 将模型灌到stream输出流中
+            outputStream.flush();
         }catch (Exception e){
             e.printStackTrace();
         }
