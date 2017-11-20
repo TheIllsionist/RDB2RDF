@@ -1,6 +1,7 @@
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -30,6 +31,7 @@ public class JenaTest {
         model.createProperty(meta + "实例").addProperty(RDF.type,OWL.ObjectProperty).addProperty(RDFS.domain,blankNode);
         Property pic = model.createProperty(meta + "pic");
         pic.addProperty(RDF.type,OWL.DatatypeProperty).addProperty(RDFS.label,"图片");
+        //数据写文件测试
         try{
             File initGraph = new File("./src/main/resources/initGraph.owl");
             FileOutputStream outputStream = new FileOutputStream(initGraph,false);
@@ -37,6 +39,16 @@ public class JenaTest {
             outputStream.flush();
         }catch (Exception e){
             e.printStackTrace();
+        }
+        //数据读文件测试
+        InputStream in = FileManager.get().open("./src/main/resources/initGraph.owl");
+        if(in == null){
+            System.out.println("未找到文件!");
+            return;
+        }else{
+            Model newModel = ModelFactory.createDefaultModel();
+            newModel.read(in,null,"turtle");
+            model.write(System.out,"turtle");
         }
     }
 
