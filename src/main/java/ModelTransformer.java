@@ -209,7 +209,12 @@ public class ModelTransformer {
                     .addProperty(RDFS.domain,model.getResource(rdb + dbName + "." + pyNametoZhName(rel.getFromTb())))
                     .addProperty(RDFS.range,blankNode);  //设置类型,label,domain,range
             //多对多关联表非主键字段作为数据类型属性定义(也许也可以作为其他类型的属性,不过更为复杂,后面再说)
-            Iterator<Column> cols = tbColsWithTypes.get(relTbName).iterator();
+            Iterator<Column> cols = null;
+            if(tbColsWithTypes.get(relTbName) == null || tbColsWithTypes.get(relTbName).size() == 0){
+                continue;
+            }else{
+                cols = tbColsWithTypes.get(relTbName).iterator();
+            }
             while(cols.hasNext()){
                 Column col = cols.next();
                 Property colDp = model.createProperty(rdb + dbName + "." + pyNametoZhName(relTbName) + "." + pyNametoZhName(col.getColName()));
@@ -242,7 +247,11 @@ public class ModelTransformer {
                 sbj.addProperty(predicate,betweenNode); //主语指向中间节点
                 betweenNode.addProperty(instanceIs,obj);  //中间节点指向宾语
                 //非主键字段值转属性值
-                Iterator<Column> cols = tbColsWithTypes.get(relTbName).iterator();
+                Iterator<Column> cols = null;
+                if(tbColsWithTypes.get(relTbName) == null || tbColsWithTypes.get(relTbName).size() == 0){
+                    continue;
+                }else
+                    cols = tbColsWithTypes.get(relTbName).iterator();
                 while(cols.hasNext()){
                     Column col = cols.next();
                     Property colDp = model.getProperty(rdb + dbName + "." + pyNametoZhName(relTbName) + "." + pyNametoZhName(col.getColName()));
