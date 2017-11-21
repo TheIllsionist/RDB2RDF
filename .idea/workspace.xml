@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
-    </list>
+    <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="" />
     <ignored path="RDB2RDF.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -690,12 +687,12 @@
       <workItem from="1511070938794" duration="12289000" />
       <workItem from="1511093700045" duration="846000" />
       <workItem from="1511165463971" duration="7285000" />
-      <workItem from="1511247128457" duration="336000" />
+      <workItem from="1511247128457" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157921000" />
+    <option name="totallyTimeSpent" value="158022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="115" y="302" width="1303" height="780" extended-state="6" />
