@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RDB2RDF.iml" filepath="$PROJECT_DIR$/RDB2RDF.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RDB2RDF.iml" filepath="$PROJECT_DIR$/RDB2RDF.iml" />
     </modules>
   </component>
 </project>

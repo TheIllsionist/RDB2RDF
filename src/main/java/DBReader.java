@@ -1,4 +1,5 @@
 import com.mysql.jdbc.Connection;
+import java.security.InvalidParameterException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,9 +14,40 @@ public class DBReader {
     private Connection conn = null;
 	private String dbName = null;
 
+    /**
+     * 构造函数,记录数据库名称并获取连接
+     * @param dbName
+     */
     public DBReader(String dbName){
+        if(dbName == null || dbName.matches("\\s*")){
+            throw new InvalidParameterException("不合法的数据库名称");
+        }
 	    this.dbName = dbName;
         conn = ConnFactory.getConnection(dbName);
+    }
+
+    /**
+     * 查询数据库中每张实体表的主键字段
+     * @return Map 键为表名,值是字段对象
+     * @throws SQLException
+     */
+    public HashMap<String,Column> getEntityKey() throws SQLException{
+        HashMap<String,Column> entityKey = new HashMap<>();
+        String sql = "select table_name,column_name,data_type from information_schema.columns " +
+                "where table_schema = \'" + dbName + "\' and column_key = \'pri\' " +
+                "  and table_name not in ( " +
+                "select table_name " +
+                "from information_schema.key_column_usage" +
+                "where table_schema = \'" + dbName + "\' " +
+                "  and referenced_table_name is not null )";
+        PreparedStatement pstmt = (PreparedStatement)conn.prepareStatement(sql);
+        ResultSet rs = pstmt.executeQuery();
+        while(rs.next()){
+            entityKey.put(rs.getString(1),new Column(rs.getString(2),dataTpMaps(rs.getString(3))));
+        }
+        rs.close();
+        pstmt.close();
+        return entityKey;
     }
 
     /**
@@ -103,7 +135,9 @@ public class DBReader {
             result = DataType.DT;
         } else if(dbDataType.equals("time")){
             result = DataType.TM;
-        }else{
+        }else if(dbDataType.equals("binary")){
+            result = DataType.BIN;
+        } else{
             result = DataType.DTTM;
         }
         return result;
