@@ -11,6 +11,7 @@ public class RdbToRdf {
         String dbName = input.nextLine();
         new Thread(new TransformThread(dbName)).start();  //启动线程
         input.close();
+
     }
 
 }

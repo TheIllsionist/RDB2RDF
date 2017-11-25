@@ -1,6 +1,12 @@
+import org.apache.jena.atlas.io.IO;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Selector;
+import org.apache.jena.rdf.model.SimpleSelector;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.vocabulary.OWL;
+import org.apache.jena.vocabulary.RDF;
 import java.io.*;
 import java.sql.SQLException;
 import java.util.*;
@@ -12,6 +18,7 @@ public class TransformThread implements Runnable{
 
     private String dbName = null;  //数据库名
     private ModelTransformer modelTransformer = null;  //转换器
+    private Model model = null;
 
     public TransformThread(String dbName){
         this.dbName = dbName;
@@ -48,21 +55,13 @@ public class TransformThread implements Runnable{
             @Override
             public void run() {
                 try{
-                    modelTransformer.transEntitySchema();
-                    modelTransformer.transEntityInstance();
-                    modelTransformer.transRelationSchema();
-                    modelTransformer.transRelationInstance();
-                    Model model = modelTransformer.getModel();
-                    if(model == null || model.size() == 0){
-                        System.out.println("模型转换出现问题,结果Statements为0!");
-                        return;
-                    }else{
-                        System.out.println("转换成功,正在写入文件......");
-                        File file = new File("./src/main/resources/KG/TestDB.owl");
-                        FileOutputStream outputStream = new FileOutputStream(file,true);
-                        RDFDataMgr.write(outputStream,model,Lang.TURTLE);
-                        outputStream.flush();
-                    }
+                    modelTransform();
+                    System.out.println("转换成功,正在写入文件......");
+                    getSchemaModel();
+                    File file = new File("./src/main/resources/KG/TestDB.owl");
+                    FileOutputStream outputStream = new FileOutputStream(file,false);
+                    RDFDataMgr.write(outputStream,model,Lang.TURTLE);
+                    outputStream.flush();
                 }catch (SQLException e){
                     System.out.println("执行数据库查询出错!");
                     e.printStackTrace();
@@ -84,6 +83,45 @@ public class TransformThread implements Runnable{
             return;
         }catch (InterruptedException e){
             e.printStackTrace();
+        }
+    }
+
+
+    public void getSchemaModel() throws SQLException,IOException{
+        if(model == null){
+            modelTransform();
+        }
+        Model schema = ModelFactory.createDefaultModel();
+        Selector classSelector = new SimpleSelector(null, RDF.type, OWL.Class);
+        Selector dataTypeSelector = new SimpleSelector(null,RDF.type, OWL.DatatypeProperty);
+        Selector objectSelector = new SimpleSelector(null,RDF.type,OWL.ObjectProperty);
+        schema.add(model.listStatements(classSelector));
+        schema.add(model.listStatements(dataTypeSelector));
+        schema.add(model.listStatements(objectSelector));
+        File file = new File("./src/main/resources/KG/TestDBSchema.owl");
+        FileOutputStream outputStream = new FileOutputStream(file,false);
+        RDFDataMgr.write(outputStream,schema,Lang.TURTLE);
+        outputStream.flush();
+    }
+
+    /**
+     * 模型转换,模型转换要求模式层在先,实例层在后,顺序不能改变
+     * @throws SQLException
+     */
+    private void modelTransform() throws SQLException {
+        if (model != null) {
+            return;
+        } else {     //转换过程
+            modelTransformer.transEntitySchema();
+            modelTransformer.transEntityInstance();
+            modelTransformer.transRelationSchema();
+            modelTransformer.transRelationInstance();
+            model = modelTransformer.getModel();
+        }
+        //转换之后的检验
+        if (model == null || model.size() == 0) {
+            System.out.println("模型转换出现问题,转换结果为0!");
+            System.exit(-1);    //转换出现问题时退出程序
         }
     }
 
