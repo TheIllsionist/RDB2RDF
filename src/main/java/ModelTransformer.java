@@ -132,6 +132,7 @@ public class ModelTransformer {
 
     /**
      * 转换单主键实体表的行为实例层
+     * 新类的添加,新类实例的添加都写在了实例层的处理里
      * @return triple的列表
      * @throws SQLException
      */

@@ -27,7 +27,7 @@ public class DBReader {
     }
 
     /**
-     * 查询数据库中每张实体表的主键字段
+     * 查询数据库中每张实体表(表中没有对库中其他表的外键引用)的主键和其数据类型
      * @return Map 键为表名,值是字段对象
      * @throws SQLException
      */

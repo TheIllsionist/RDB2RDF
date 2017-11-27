@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RdbToRdf.java" afterPath="$PROJECT_DIR$/src/main/java/RdbToRdf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TransformThread.java" afterPath="$PROJECT_DIR$/src/main/java/TransformThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DBReader.java" afterPath="$PROJECT_DIR$/src/main/java/DBReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
     </list>
     <ignored path="RDB2RDF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,18 +26,7 @@
     <favorites_list name="RDB2RDF" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RdbToRdf.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RdbToRdf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,13 +65,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/MysqlConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/JenaTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/utilsql.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Column.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DBReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/RdbToRdf.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransformThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DBReader.java" />
       </list>
     </option>
   </component>
@@ -110,10 +100,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1432" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -205,6 +195,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RDB2RDF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RDB2RDF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestDB" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -810,31 +826,33 @@
       <workItem from="1511486554047" duration="6728000" />
       <workItem from="1511572404368" duration="614000" />
       <workItem from="1511576137900" duration="3614000" />
-      <workItem from="1511580130534" duration="10025000" />
+      <workItem from="1511580130534" duration="10185000" />
+      <workItem from="1511600605940" duration="23000" />
+      <workItem from="1511773894941" duration="4588000" />
+      <workItem from="1511787736644" duration="1257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183062000" />
+    <option name="totallyTimeSpent" value="189090000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1432" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19906688" sideWeight="0.5139442" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828686" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2147806" sideWeight="0.4860558" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2147806" sideWeight="0.4860558" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22330096" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19770774" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -846,6 +864,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
@@ -894,9 +913,6 @@
             <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
             <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
@@ -919,8 +935,8 @@
         <state relative-caret-position="425">
           <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
           <folding>
-            <element signature="e#966#1399#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
@@ -928,6 +944,7 @@
             <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
           </folding>
@@ -951,9 +968,6 @@
             <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
             <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
@@ -988,9 +1002,6 @@
             <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
             <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
@@ -1018,9 +1029,6 @@
             <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
             <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
@@ -1036,8 +1044,8 @@
         <state relative-caret-position="136">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="71" />
           <folding>
-            <element signature="e#966#1399#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
@@ -1045,6 +1053,7 @@
             <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
             <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
           </folding>
@@ -1068,9 +1077,6 @@
             <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
             <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
@@ -1227,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,24 +1252,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511582397650" expanded="true" signature="923:1349" ph="select table... columns" />
-            <marker date="1511582397650" expanded="true" signature="923:1351" ph="select table... columns" />
-            <marker date="1511582397650" expanded="true" signature="6202:6216" ph="select * fro... missingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,51 +1267,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ModelTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
-          <folding>
-            <element signature="docComment;field#tbColsWithTypes#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntitySchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transEntityInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationSchema#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#getUUID#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#DivideRelInfo#0;class#ModelTransformer#0" expanded="false" />
-            <element signature="docComment;method#classIsContained#0;class#ModelTransformer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.owl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4692">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDBSchema.owl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDBSchema.owl" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
+        <state relative-caret-position="-187">
           <caret line="62" column="69" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
@@ -1339,9 +1291,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RdbToRdf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDB.owl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ModelTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="174" column="64" selection-start-line="174" selection-start-column="64" selection-end-line="174" selection-end-column="64" />
+          <folding>
+            <element signature="docComment;field#tbColsWithTypes#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#initModel#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="method#initModel#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#transRelationInstance#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#dataTypeToXSD#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#pyNametoZhName#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#getUUID#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#DivideRelInfo#0;class#ModelTransformer#0" expanded="false" />
+            <element signature="docComment;method#classIsContained#0;class#ModelTransformer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding>
+            <marker date="1511793818910" expanded="true" signature="944:1370" ph="select table... columns" />
+            <marker date="1511793818910" expanded="true" signature="944:1372" ph="select table... columns" />
+            <marker date="1511793818910" expanded="true" signature="6223:6237" ph="select * fro... missingValue" />
+          </folding>
         </state>
       </provider>
     </entry>
