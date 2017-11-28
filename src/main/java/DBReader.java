@@ -27,27 +27,28 @@ public class DBReader {
     }
 
     /**
-     * 查询数据库中每张实体表(表中没有对库中其他表的外键引用)的主键和其数据类型
-     * @return Map 键为表名,值是字段对象
+     * 查询数据库中每一张实体表(没有外键)的表名,字段名,数据类型,键类型(是否为主键)
+     * @return SQL执行结果集
      * @throws SQLException
      */
-    public HashMap<String,Column> getEntityKey() throws SQLException{
-        HashMap<String,Column> entityKey = new HashMap<>();
-        String sql = "select table_name,column_name,data_type from information_schema.columns " +
-                "where table_schema = \'" + dbName + "\' and column_key = \'pri\' " +
-                "  and table_name not in ( " +
-                "select table_name " +
-                "from information_schema.key_column_usage" +
-                "where table_schema = \'" + dbName + "\' " +
-                "  and referenced_table_name is not null )";
-        PreparedStatement pstmt = (PreparedStatement)conn.prepareStatement(sql);
-        ResultSet rs = pstmt.executeQuery();
-        while(rs.next()){
-            entityKey.put(rs.getString(1),new Column(rs.getString(2),dataTpMaps(rs.getString(3))));
+    public ResultSet entityColInfo() throws SQLException{
+        if(dbName == null || dbName.matches("\\s*")){
+            throw new InvalidParameterException("不合法的数据库名称");
         }
-        rs.close();
-        pstmt.close();
-        return entityKey;
+        String sql = "select table_name,column_name,data_type,column_key " +
+                "from information_schema.columns " +
+                "where table_schema = \'" + dbName + "\' " +
+                "  and table_name in ( " +
+                "  select distinct table_name " +
+                "  from information_schema.key_column_usage " +
+                "  where table_schema = \'" + dbName + "\'" +
+                "    and table_name not in (" +
+                "    select table_name" +
+                "    from information_schema.key_column_usage" +
+                "    where table_schema = \'" + dbName + "\'" +
+                "      and referenced_table_name is not null))";
+        PreparedStatement pstmt = (PreparedStatement)conn.prepareStatement(sql);
+        return pstmt.executeQuery();
     }
 
     /**

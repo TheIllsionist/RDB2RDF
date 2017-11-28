@@ -4,7 +4,6 @@
     <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DBReader.java" afterPath="$PROJECT_DIR$/src/main/java/DBReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
     </list>
     <ignored path="RDB2RDF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +25,24 @@
     <favorites_list name="RDB2RDF" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="DBReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1511834778415" expanded="true" signature="995:1664" ph="select table... columns" />
+                <marker date="1511834778415" expanded="true" signature="1226:1663" ph="select disti... key_column_usage" />
+                <marker date="1511834778415" expanded="true" signature="1452:1662" ph="select table... key_column_usage" />
+                <marker date="1511834778415" expanded="true" signature="6302:6316" ph="select * fro... missingValue" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,6 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,7 +307,6 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -829,16 +845,17 @@
       <workItem from="1511580130534" duration="10185000" />
       <workItem from="1511600605940" duration="23000" />
       <workItem from="1511773894941" duration="4588000" />
-      <workItem from="1511787736644" duration="1257000" />
+      <workItem from="1511787736644" duration="1898000" />
+      <workItem from="1511833180281" duration="2960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189090000" />
+    <option name="totallyTimeSpent" value="192691000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -852,7 +869,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19770774" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19770774" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1326,12 +1343,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="289">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
           <folding>
-            <marker date="1511793818910" expanded="true" signature="944:1370" ph="select table... columns" />
-            <marker date="1511793818910" expanded="true" signature="944:1372" ph="select table... columns" />
-            <marker date="1511793818910" expanded="true" signature="6223:6237" ph="select * fro... missingValue" />
+            <element signature="imports" expanded="true" />
+            <marker date="1511834778415" expanded="true" signature="995:1664" ph="select table... columns" />
+            <marker date="1511834778415" expanded="true" signature="1226:1663" ph="select disti... key_column_usage" />
+            <marker date="1511834778415" expanded="true" signature="1452:1662" ph="select table... key_column_usage" />
+            <marker date="1511834778415" expanded="true" signature="6302:6316" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
