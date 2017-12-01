@@ -1,0 +1,226 @@
+@prefix rdb:   <http://kse.seu.edu.cn/rdb#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix meta:  <http://kse.seu.edu.cn/meta#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdb:TestDB.语言书  a   owl:Class ;
+        rdfs:label  "语言书" .
+
+rdb:TestDB.国别.中国  a  rdb:TestDB.国别 ;
+        rdfs:label  "中国" .
+
+rdb:TestDB.作者.3  a        rdb:TestDB.作者 ;
+        rdfs:label        "高洪岩" ;
+        rdb:TestDB.作者.ID  3 ;
+        rdb:TestDB.作者.名字  "高洪岩" ;
+        rdb:TestDB.作者.国别  rdb:e439af33391d4f44bb223b921a66087a ;
+        rdb:TestDB.作者.年龄  51 ;
+        rdb:TestDB.撰写     rdb:b97b833d93cc49819065033cc6f962f2 .
+
+rdb:c5c339e7ebf7431588022de6cfc72847
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.出版社.机械工业出版社 .
+
+rdb:TestDB.出版社.人民邮电出版社
+        a           rdb:TestDB.出版社 ;
+        rdfs:label  "人民邮电出版社" .
+
+rdb:TestDB.作者.ID  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.作者 ;
+        rdfs:label   "ID" ;
+        rdfs:range   xsd:integer .
+
+rdb:TestDB.书籍  a    owl:Class ;
+        rdfs:label  "书籍" .
+
+rdb:TestDB.书籍.5  a         rdb:TestDB.方法书 , rdb:TestDB.书籍 ;
+        rdfs:label         "统计学习方法" ;
+        rdb:TestDB.书籍.ID   5 ;
+        rdb:TestDB.书籍.出版社  rdb:338c77c67fc74fd9b3e4baafd476b402 ;
+        rdb:TestDB.书籍.名称   "统计学习方法" .
+
+rdb:e439af33391d4f44bb223b921a66087a
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.国别.中国 .
+
+rdb:TestDB.出版社.清华大学出版社
+        a           rdb:TestDB.出版社 ;
+        rdfs:label  "清华大学出版社" .
+
+rdb:TestDB.作者.2  a        rdb:TestDB.作者 ;
+        rdfs:label        "鸟哥" ;
+        rdb:TestDB.作者.ID  2 ;
+        rdb:TestDB.作者.名字  "鸟哥" ;
+        rdb:TestDB.作者.国别  rdb:49737ed2f5e44a6fbac045ebacb16f9b ;
+        rdb:TestDB.作者.年龄  36 ;
+        rdb:TestDB.撰写     rdb:071be141d0fa4c468850d73ee65818f2 .
+
+meta:blankNode  a  owl:Class .
+
+rdb:338c77c67fc74fd9b3e4baafd476b402
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.出版社.清华大学出版社 .
+
+meta:实例  a           owl:ObjectProperty ;
+        rdfs:domain  meta:blankNode .
+
+rdb:TestDB.作者  a    owl:Class ;
+        rdfs:label  "作者" .
+
+rdb:TestDB.书籍.4  a         rdb:TestDB.语言书 , rdb:TestDB.书籍 ;
+        rdfs:label         "Java编程思想" ;
+        rdb:TestDB.书籍.ID   4 ;
+        rdb:TestDB.书籍.价格   86 ;
+        rdb:TestDB.书籍.出版社  rdb:7918b3c0f73f4fc4a4ff8a606f0c649f ;
+        rdb:TestDB.书籍.名称   "Java编程思想" .
+
+rdb:6a08504f5436405aa69e765370c97764
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.出版社.人民邮电出版社 .
+
+rdb:071be141d0fa4c468850d73ee65818f2
+        a                    meta:blankNode ;
+        meta:实例              rdb:TestDB.书籍.3 ;
+        rdb:TestDB.作者_书籍.数量  8 .
+
+rdb:TestDB.作者.1  a        rdb:TestDB.作者 ;
+        rdfs:label        "周志明" ;
+        rdb:TestDB.作者.ID  1 ;
+        rdb:TestDB.作者.名字  "周志明" ;
+        rdb:TestDB.作者.国别  rdb:b9b74756cc1d4e54b1d8752b83b106ea ;
+        rdb:TestDB.作者.年龄  39 ;
+        rdb:TestDB.撰写     rdb:17e5f48c1ae441b69d4c8a1f6e8107cb .
+
+rdb:TestDB.作者.名字  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.作者 ;
+        rdfs:label   "名字" ;
+        rdfs:range   xsd:string .
+
+rdb:TestDB.书籍.出版社  a  owl:ObjectProperty ;
+        rdfs:label  "出版社" ;
+        rdfs:range  meta:blankNode .
+
+rdb:1cbb403e9f724cb0886766c1dc1e48fb
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.出版社.机械工业出版社 .
+
+rdb:TestDB.工具书  a   owl:Class ;
+        rdfs:label  "工具书" .
+
+rdb:TestDB.撰写  a     owl:ObjectProperty ;
+        rdfs:domain  rdb:TestDB.作者 ;
+        rdfs:label   "撰写" ;
+        rdfs:range   meta:blankNode .
+
+rdb:TestDB.书籍.3  a         rdb:TestDB.工具书 , rdb:TestDB.书籍 ;
+        rdfs:label         "鸟哥的Linux私房菜" ;
+        rdb:TestDB.书籍.ID   3 ;
+        rdb:TestDB.书籍.价格   59 ;
+        rdb:TestDB.书籍.出版社  rdb:6a08504f5436405aa69e765370c97764 ;
+        rdb:TestDB.书籍.名称   "鸟哥的Linux私房菜" .
+
+rdb:TestDB.出版社  a   owl:Class ;
+        rdfs:label  "出版社" .
+
+rdb:a53ff94dd2784c4680125908999d73e8
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.国别.美国 .
+
+rdb:TestDB.方法书  a   owl:Class ;
+        rdfs:label  "方法书" .
+
+rdb:TestDB.思想书  a   owl:Class ;
+        rdfs:label  "思想书" .
+
+rdb:3ffdfc8d64344a7ebc58db63a8be0aef
+        a                    meta:blankNode ;
+        meta:实例              rdb:TestDB.书籍.4 ;
+        rdb:TestDB.作者_书籍.数量  12 .
+
+rdb:TestDB.书籍.价格  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.书籍 ;
+        rdfs:label   "价格" ;
+        rdfs:range   xsd:integer .
+
+rdb:TestDB.作者_书籍.数量  a  owl:DatatypeProperty ;
+        rdfs:domain  meta:blankNode ;
+        rdfs:label   "数量" ;
+        rdfs:range   xsd:integer .
+
+meta:pic  a         owl:DatatypeProperty ;
+        rdfs:label  "图片" .
+
+rdb:TestDB.书籍.ID  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.书籍 ;
+        rdfs:label   "ID" ;
+        rdfs:range   xsd:integer .
+
+rdb:TestDB.书籍.2  a         rdb:TestDB.思想书 , rdb:TestDB.书籍 ;
+        rdfs:label         "深入理解Java虚拟机" ;
+        rdb:TestDB.书籍.ID   2 ;
+        rdb:TestDB.书籍.价格   62 ;
+        rdb:TestDB.书籍.出版社  rdb:1cbb403e9f724cb0886766c1dc1e48fb ;
+        rdb:TestDB.书籍.名称   "深入理解Java虚拟机" .
+
+rdb:TestDB.出版社.机械工业出版社
+        a           rdb:TestDB.出版社 ;
+        rdfs:label  "机械工业出版社" .
+
+rdb:TestDB.国别  a    owl:Class ;
+        rdfs:label  "国别" .
+
+rdb:b97b833d93cc49819065033cc6f962f2
+        a                    meta:blankNode ;
+        meta:实例              rdb:TestDB.书籍.1 ;
+        rdb:TestDB.作者_书籍.数量  10 .
+
+rdb:TestDB.作者.年龄  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.作者 ;
+        rdfs:label   "年龄" ;
+        rdfs:range   xsd:integer .
+
+rdb:TestDB.国别.美国  a  rdb:TestDB.国别 ;
+        rdfs:label  "美国" .
+
+rdb:TestDB.作者.4  a        rdb:TestDB.作者 ;
+        rdfs:label        "Bruce Eckel" ;
+        rdb:TestDB.作者.ID  4 ;
+        rdb:TestDB.作者.名字  "Bruce Eckel" ;
+        rdb:TestDB.作者.国别  rdb:a53ff94dd2784c4680125908999d73e8 ;
+        rdb:TestDB.作者.年龄  60 ;
+        rdb:TestDB.撰写     rdb:3ffdfc8d64344a7ebc58db63a8be0aef .
+
+rdb:TestDB.书籍.1  a         rdb:TestDB.语言书 , rdb:TestDB.书籍 ;
+        rdfs:label         "Java多线程编程核心技术" ;
+        rdb:TestDB.书籍.ID   1 ;
+        rdb:TestDB.书籍.价格   54 ;
+        rdb:TestDB.书籍.出版社  rdb:c5c339e7ebf7431588022de6cfc72847 ;
+        rdb:TestDB.书籍.名称   "Java多线程编程核心技术" .
+
+rdb:b9b74756cc1d4e54b1d8752b83b106ea
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.国别.中国 .
+
+rdb:7918b3c0f73f4fc4a4ff8a606f0c649f
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.出版社.机械工业出版社 .
+
+rdb:49737ed2f5e44a6fbac045ebacb16f9b
+        a        meta:blankNode ;
+        meta:实例  rdb:TestDB.国别.中国 .
+
+rdb:TestDB.作者.国别  a  owl:ObjectProperty ;
+        rdfs:label  "国别" ;
+        rdfs:range  meta:blankNode .
+
+rdb:TestDB.书籍.名称  a  owl:DatatypeProperty ;
+        rdfs:domain  rdb:TestDB.书籍 ;
+        rdfs:label   "名称" ;
+        rdfs:range   xsd:string .
+
+rdb:17e5f48c1ae441b69d4c8a1f6e8107cb
+        a                    meta:blankNode ;
+        meta:实例              rdb:TestDB.书籍.2 ;
+        rdb:TestDB.作者_书籍.数量  6 .

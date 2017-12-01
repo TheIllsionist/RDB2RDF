@@ -1,0 +1,62 @@
+<http://kse.seu.edu.cn/rdb#TestDB.书籍.出版社>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.书籍.ID>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.撰写>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.书籍.价格>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.国别>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.语言书>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者_书籍.数量>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者.ID>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.出版社>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/meta#pic>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.书籍.名称>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者.名字>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.工具书>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.思想书>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者.国别>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.方法书>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/meta#实例>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.作者.年龄>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+<http://kse.seu.edu.cn/rdb#TestDB.书籍>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+<http://kse.seu.edu.cn/meta#blankNode>
+        a       <http://www.w3.org/2002/07/owl#Class> .

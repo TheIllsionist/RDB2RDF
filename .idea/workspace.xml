@@ -4,6 +4,7 @@
     <list default="true" id="1da2f536-e9ce-43b2-9f37-40c58a3cbea2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DBReader.java" afterPath="$PROJECT_DIR$/src/main/java/DBReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TransformThread.java" afterPath="$PROJECT_DIR$/src/main/java/TransformThread.java" />
     </list>
     <ignored path="RDB2RDF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,24 +26,7 @@
     <favorites_list name="RDB2RDF" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DBReader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1511834778415" expanded="true" signature="995:1664" ph="select table... columns" />
-                <marker date="1511834778415" expanded="true" signature="1226:1663" ph="select disti... key_column_usage" />
-                <marker date="1511834778415" expanded="true" signature="1452:1662" ph="select table... key_column_usage" />
-                <marker date="1511834778415" expanded="true" signature="6302:6316" ph="select * fro... missingValue" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +49,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ConnFactory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/TestDB/entityTableList" />
-        <option value="$PROJECT_DIR$/src/main/java/Relation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Property.java" />
         <option value="$PROJECT_DIR$/src/main/resources/TestDB/colJudgeDic.txt" />
         <option value="$PROJECT_DIR$/src/main/java/SchemaTransfomer.java" />
@@ -85,9 +68,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Column.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataType.java" />
         <option value="$PROJECT_DIR$/src/main/java/RdbToRdf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TransformThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModelTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Relation.java" />
         <option value="$PROJECT_DIR$/src/main/java/DBReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TransformThread.java" />
       </list>
     </option>
   </component>
@@ -116,10 +100,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1432" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -146,7 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,8 +289,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -846,16 +830,21 @@
       <workItem from="1511600605940" duration="23000" />
       <workItem from="1511773894941" duration="4588000" />
       <workItem from="1511787736644" duration="1898000" />
-      <workItem from="1511833180281" duration="2960000" />
+      <workItem from="1511833180281" duration="3557000" />
+      <workItem from="1511944815463" duration="2232000" />
+      <workItem from="1511954537109" duration="5058000" />
+      <workItem from="1512018846551" duration="10396000" />
+      <workItem from="1512048352005" duration="2651000" />
+      <workItem from="1512129200652" duration="2027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192691000" />
+    <option name="totallyTimeSpent" value="215652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
-    <editor active="true" />
+    <frame x="1432" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -869,7 +858,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19770774" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22330096" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="755" y="138" width="256" height="630" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -952,6 +941,10 @@
         <state relative-caret-position="425">
           <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
           <folding>
+            <element signature="e#930#1363#0" expanded="false" />
+            <element signature="e#1362#1363#0" expanded="false" />
+            <element signature="e#1848#2844#0" expanded="false" />
+            <element signature="e#2843#2844#0" expanded="false" />
             <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
@@ -1061,6 +1054,10 @@
         <state relative-caret-position="136">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="71" />
           <folding>
+            <element signature="e#930#1363#0" expanded="false" />
+            <element signature="e#1362#1363#0" expanded="false" />
+            <element signature="e#1848#2844#0" expanded="false" />
+            <element signature="e#2843#2844#0" expanded="false" />
             <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
             <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
@@ -1238,14 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Relation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PropertyType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1276,36 +1265,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Column.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/KG/TestDBSchema.owl" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="62" column="69" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
-          <folding>
-            <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
-            <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RdbToRdf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1321,10 +1281,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Relation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="117" column="36" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1512130492419" expanded="true" signature="433:994" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="433:1300" ph="select table... " />
+            <marker date="1512130492419" expanded="true" signature="696:993" ph="select colum... key_column_usage" />
+            <marker date="1512130492419" expanded="true" signature="1038:1295" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="2233:2463" ph="select table... tables" />
+            <marker date="1512130492419" expanded="true" signature="2780:2819" ph="select table... " />
+            <marker date="1512130492419" expanded="true" signature="2780:2872" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="2780:2914" ph="select table... columnswhere" />
+            <marker date="1512130492419" expanded="true" signature="2780:2917" ph="select table... columnswhere" />
+            <marker date="1512130492419" expanded="true" signature="2780:2933" ph="select table... columnswhere" />
+            <marker date="1512130492419" expanded="true" signature="2780:2973" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="2780:2981" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="2780:2982" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="2780:2983" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="3282:3435" ph="select table... columns" />
+            <marker date="1512130492419" expanded="true" signature="3749:4008" ph="select table... key_column_usage" />
+            <marker date="1512130492419" expanded="true" signature="8630:8644" ph="select * fro... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModelTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="174" column="64" selection-start-line="174" selection-start-column="64" selection-end-line="174" selection-end-column="64" />
+        <state relative-caret-position="187">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="docComment;field#tbColsWithTypes#0;class#ModelTransformer#0" expanded="false" />
             <element signature="docComment;method#ModelTransformer#0;class#ModelTransformer#0" expanded="false" />
@@ -1341,16 +1344,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DBReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransformThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        <state relative-caret-position="170">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1511834778415" expanded="true" signature="995:1664" ph="select table... columns" />
-            <marker date="1511834778415" expanded="true" signature="1226:1663" ph="select disti... key_column_usage" />
-            <marker date="1511834778415" expanded="true" signature="1452:1662" ph="select table... key_column_usage" />
-            <marker date="1511834778415" expanded="true" signature="6302:6316" ph="select * fro... missingValue" />
+            <element signature="docComment;method#modelTransform#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#modelTransform#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getPyToZh#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getColJudgeDic#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getRelTbToRelMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityTableMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="docComment;method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
+            <element signature="method#getEntityDescMap#0;class#TransformThread#0" expanded="false" />
           </folding>
         </state>
       </provider>

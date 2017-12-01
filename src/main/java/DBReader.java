@@ -13,6 +13,24 @@ public class DBReader {
 
     private Connection conn = null;
 	private String dbName = null;
+    //得到数据库中所有实体表表名的sql查询语句
+    private final String entityTbNames = "select table_name " +
+            "  from information_schema.columns as cols " +
+            "  where cols.table_schema = \'" + dbName + "\' " +
+            "    and cols.column_key = \'pri\' " +
+            "    and cols.column_name not in " +
+            "    (select column_name " +
+            "     from information_schema.key_column_usage as keyCols " +
+            "     where keyCols.table_schema = \'" + dbName + "\' " +
+            "       and keyCols.table_name = cols.table_name " +
+            "       and keyCols.referenced_table_name is not null)" +
+            "  union " +
+            "  select table_name " +
+            "  from information_schema.columns " +
+            "  where table_schema = \'" + dbName + "\' " +
+            "    and column_key = \'pri\' " +
+            "  group by table_name " +
+            "  having count(column_name) == 1";
 
     /**
      * 构造函数,记录数据库名称并获取连接
@@ -20,36 +38,87 @@ public class DBReader {
      */
     public DBReader(String dbName){
         if(dbName == null || dbName.matches("\\s*")){
-            throw new InvalidParameterException("不合法的数据库名称");
+            throw new InvalidParameterException("不合法的数据库名称!");
         }
 	    this.dbName = dbName;
         conn = ConnFactory.getConnection(dbName);
     }
 
     /**
-     * 查询数据库中每一张实体表(没有外键)的表名,字段名,数据类型,键类型(是否为主键)
+     * 查询一个数据库中所有 “实体表” 的表名
+     * 实体表集合是下面两个集合的并集:
+     * 集合1.满足条件:表中至少存在一个字段,它是主键,但不是外键的表组成的集合
+     * 集合2.满足条件:表中主键只包含一个字段的表(即使该字段即是主键也是外键)组成的集合
+     * @return SQL查询结果集
+     * @throws SQLException
+     */
+    private ResultSet entityTables() throws SQLException{
+        String sql = entityTbNames;
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        return pstmt.executeQuery();
+    }
+
+    /**
+     * 查询一个数据库中所有 “关系表” 的表名
+     * 一个数据库中不是实体表的表都是关系表
+     * @return  SQL查询结果集
+     * @throws SQLException
+     */
+    private ResultSet relationTables() throws SQLException{
+        String sql = "select table_name from information_schema.tables " +
+                "where table_type = \'base table\' " +
+                "  and table_schema = " + dbName + " " +
+                "  and table_name not in ( " + entityTbNames + ")"; //不在实体表中的表都是关系表
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        return pstmt.executeQuery();
+    }
+
+
+    /**
+     * 查询数据库中每一张表的表名,主键名,数据类型
      * @return SQL执行结果集
      * @throws SQLException
      */
-    public ResultSet entityColInfo() throws SQLException{
-        if(dbName == null || dbName.matches("\\s*")){
-            throw new InvalidParameterException("不合法的数据库名称");
-        }
-        String sql = "select table_name,column_name,data_type,column_key " +
+    private ResultSet tableKeys() throws SQLException{
+        String sql =
+                "select table_name,column_name,data_type " +
                 "from information_schema.columns " +
                 "where table_schema = \'" + dbName + "\' " +
-                "  and table_name in ( " +
-                "  select distinct table_name " +
-                "  from information_schema.key_column_usage " +
-                "  where table_schema = \'" + dbName + "\'" +
-                "    and table_name not in (" +
-                "    select table_name" +
-                "    from information_schema.key_column_usage" +
-                "    where table_schema = \'" + dbName + "\'" +
-                "      and referenced_table_name is not null))";
-        PreparedStatement pstmt = (PreparedStatement)conn.prepareStatement(sql);
+                "  and column_key = \'pri\' ";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
         return pstmt.executeQuery();
     }
+
+    /**
+     * 查询数据库中每一张表的字段和数据类型
+     * @return SQL执行结果集
+     * @throws SQLException
+     */
+    private ResultSet tableColumns() throws SQLException {
+        String sql =
+                "select table_name,column_name,data_type " +
+                "from information_schema.columns " +
+                "where table_schema = \'" + dbName + "\' ";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        return pstmt.executeQuery();
+    }
+
+    /**
+     * 查询数据库中存在的所有引用信息(表名,列名,被引表名,被引列名)
+     * @return SQL执行结果集
+     * @throws SQLException
+     */
+    private ResultSet relationInfo() throws SQLException{
+        String sql =
+                "select table_name,column_name,referenced_table_name,referenced_column_name " +
+                "from information_schema.key_column_usage " +
+                "where table_schema = \'" + dbName + "\' " +
+                "  and referenced_column_name is not null ";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        return pstmt.executeQuery();
+    }
+
+
 
     /**
      * 查询数据库中所有实体表的字段名和其数据类型
